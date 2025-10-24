@@ -42,14 +42,14 @@ function App() {
   }, []);
 
   return (
-    <>
+    <main className="flex flex-col w-full min-h-screen items-center gap-3.5 p-3.5 bg-blue-100">
       <TodoInput
         onAdd={handleAdd}
         inputValue={inputValue}
         setInputValue={setInputValue}
       />
       <TodoList todos={todos} onDelete={handleDelete} onEdit={handleEdit} />
-    </>
+    </main>
   );
 }
 

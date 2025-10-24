@@ -1,12 +1,13 @@
 export default function TodoCard({ children, index, onDelete, onEdit }) {
   return (
-    <li className="todo-item">
+    <li className="flex flex-wrap w-full items-center gap-3.5 p-3.5 bg-slate-50 rounded-[14px] hover:outline outline-slate-500">
       {children}
-      <div className="actions-container">
+      <div className="shrink-0 flex items-center gap-3.5">
         <button
           onClick={() => {
             onEdit(index);
           }}
+          className="cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +26,7 @@ export default function TodoCard({ children, index, onDelete, onEdit }) {
           onClick={() => {
             onDelete(index);
           }}
+          className="cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
